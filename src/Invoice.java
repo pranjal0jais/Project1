@@ -1,10 +1,9 @@
-import javax.xml.transform.Source;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Invoice {
-    private Customer customer;
-    private List<Service> serviceList = new ArrayList<>();
+    private final Customer customer;
+    private final List<Service> serviceList;
     private double totalCost;
 
     public Invoice(Customer customer) {
@@ -43,7 +42,7 @@ public class Invoice {
         Thread.sleep(500);
         System.out.println("Total Amount - \t " + totalCost);
         } catch (Exception e){
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 }
