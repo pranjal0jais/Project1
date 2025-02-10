@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class GarageService {
-    private Map<String, Customer> customerMap;
-    private List<Service> availableService;
+    private final Map<String, Customer> customerMap;
+    private final List<Service> availableService;
 
 
     public GarageService(){
