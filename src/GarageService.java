@@ -43,6 +43,7 @@ public class GarageService {
             for (int i = 0; i < availableService.size(); i++) {
                 System.out.println(i+1 + ". " + availableService.get(i).name());
             }
+            System.out.println("Enter your choice - ");
             int choice = sc.nextInt();
             if(choice == 0) break;
             if(choice >= 1 && choice <= availableService.size()){
@@ -53,5 +54,18 @@ public class GarageService {
             }
         }
         invoice.printInvoice();
+    }
+
+    public void viewAllCustomers(){
+            System.out.println("------------------- CUSTOMER LIST -------------------");
+            if(customerMap.isEmpty()) System.out.println("Customer List is Empty");
+        for(String key : customerMap.keySet()){
+            System.out.println("NAME - " + customerMap.get(key).name());
+            System.out.println("PHONE NUMBER - " + customerMap.get(key).ph_Number());
+            System.out.println("CAR MAKE - " + customerMap.get(key).car().make());
+            System.out.println("CAR MODEL - " + customerMap.get(key).car().model());
+            System.out.println("CAR PLATE NUMBER - " + customerMap.get(key).car().plate());
+            System.out.println("-----------------------------------------------------------");
+        }
     }
 }

@@ -4,8 +4,8 @@ public class Customer {
     private Car car;
 
     public Customer(String name, String ph_Number, Car car) {
-        name = name;
-        ph_Number = ph_Number;
+        this.name = name;
+        this.ph_Number = ph_Number;
         this.car = car;
     }
 

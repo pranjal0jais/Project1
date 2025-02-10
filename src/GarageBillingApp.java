@@ -6,7 +6,8 @@ public class GarageBillingApp {
         System.out.println("------------------- ABCXYZ GARAGE SERVICES -------------------");
         System.out.println("1. Add Customer");
         System.out.println("2. Create Bill");
-        System.out.println("3. Exit");
+        System.out.println("3. View All Customers");
+        System.out.println("4. Exit");
     }
 
     public static void main(String[] args) {
@@ -18,11 +19,11 @@ public class GarageBillingApp {
             System.out.println("Enter your choice - ");
             switch(sc.nextInt()){
                 case 1:
+                    System.out.println("------------------- ADD CUSTOMER -------------------");
                     System.out.println("Add Customer Detail");
-
-                    System.out.print("Customer Name - ");
-                    String customerName = sc.next();
                     sc.nextLine();
+                    System.out.print("Customer Name - ");
+                    String customerName = sc.nextLine();
                     System.out.print("Customer Phone Number - ");
                     String customerPhNumber = sc.next();
                     sc.nextLine();
@@ -38,7 +39,6 @@ public class GarageBillingApp {
                     System.out.print("Car Plate Number - ");
                     String carPlateNo = sc.next();
                     sc.nextLine();
-
                     garageService.addCustomer(customerName, customerPhNumber, carMake, carModel, carPlateNo);
 
                     break;
@@ -47,6 +47,9 @@ public class GarageBillingApp {
                     garageService.generateInvoice(sc.next());
                     break;
                 case 3:
+                    garageService.viewAllCustomers();
+                    break;
+                case 4:
                     System.out.println("Thank You For Using.");
                     return;
                 default:
