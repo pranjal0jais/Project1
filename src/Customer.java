@@ -1,7 +1,7 @@
 public class Customer {
-    private String name;
-    private String ph_Number;
-    private Car car;
+    private final String name;
+    private final String ph_Number;
+    private final Car car;
 
     public Customer(String name, String ph_Number, Car car) {
         this.name = name;
